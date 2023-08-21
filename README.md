@@ -2,7 +2,11 @@
 
 - Zoom, VSCode, GitHub, Markdown, and Mermaid combine to create a truly 21st-century blackboard.
 
-## Objectives
+--- 
+
+<Pack scale=0.60>
+
+## Markdown
 
 <!-- markdownlint-disable MD038 -->
 | Syntax | Meaning |
@@ -23,7 +27,7 @@
 | `_italics_` | _italics_ |
 | `**bold**` | **bold** |
 | `` ` `` code `` ` `` | `code` |
-| `$$\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$$` | $$\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$$ |
+| `$$\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$$` | $\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$ |
 | `- [ ]` To do item | - ☐ To Do item |
 | `- [x]` Completed item | - ☑ Completed Item |
 | ` ```csharp ` | Start a block of sample C# code |
@@ -33,6 +37,8 @@
 | ` ```mermaid ` | Start a Mermaid diagram block |
 | ` ``` `| End of block |
 <!-- markdownlint-enable MD038 -->
+
+</Pack>
 
 ---
 
@@ -87,141 +93,141 @@
 
 - Simplest: Mind maps (`mindmap`)
 
-  ```mermaid
-  %%{init: {'theme':'forest'}}%%
+```mermaid
+%%{init: {'theme':'forest'}}%%
 
-  mindmap
-   VSCode as a 21st Century Blackboard
-    Multiple Modalities
-     Visual
-     Auditory
-     Graphical
-    Multiple Dimensions
-     Thematic Organization
-     Chronological History
-    Diagrams As Code
-     Mermaid
-    GitHub README
-     Capstone documentation
-  ```
+mindmap
+ VSCode as a 21st Century Blackboard
+  Multiple Modalities
+   Visual
+   Auditory
+   Graphical
+  Multiple Dimensions
+   Thematic Organization
+   Chronological History
+  Diagrams As Code
+   Mermaid
+  GitHub README
+   Capstone documentation
+```
 
 ---
 
 - Also Simple: Interaction diagrams (`sequenceDiagram`)
 
-  ```mermaid
-  sequenceDiagram
-   participant Teacher
-   participant VSCode
-   participant GitHub
-   participant Student
-   Student ->> Teacher: Questions
-   Teacher ->> VSCode: Typing Into Markdown
-   VSCode ->> Student: Zoom Screen Share
-   VSCode ->> GitHub: Pushing Improvements
-   GitHub ->> Student: Revision History
-   VSCode ->> Student: Slide Show
-  ```
+```mermaid
+sequenceDiagram
+ participant Teacher
+ participant VSCode
+ participant GitHub
+ participant Student
+ Student ->> Teacher: Questions
+ Teacher ->> VSCode: Typing Into Markdown
+ VSCode ->> Student: Zoom Screen Share
+ VSCode ->> GitHub: Pushing Improvements
+ GitHub ->> Student: Revision History
+ VSCode ->> Student: Slide Show
+```
 
 ---
 
 - Also Simple: Class diagrams (`classDiagram`)
 
-  ```mermaid
-  classDiagram
-   %% An iterable is anything on the right side of a for loop
-   class Iterable~E~ {
-    <<interface>>
-    +iterator()
-   }
+```mermaid
+classDiagram
+ %% An iterable is anything on the right side of a for loop
+ class Iterable~E~ {
+  <<interface>>
+  +iterator()
+ }
 
-   %% Collections add the notion of size
-   class Collection~E~ {
-    <<interface>>
-    +isEmpty()
-    +size()
-   }
+ %% Collections add the notion of size
+ class Collection~E~ {
+  <<interface>>
+  +isEmpty()
+  +size()
+ }
 
-   %% Sets add the notion of "containing"
-   class Set~E~ {
-    <<interface>>
-    +add(E e)
-    +contains(E e)
-    +remove(E e)
-   }
+ %% Sets add the notion of "containing"
+ class Set~E~ {
+  <<interface>>
+  +add(E e)
+  +contains(E e)
+  +remove(E e)
+ }
 
-   %% SortedSets only make sense when you can ask "e1 < e2"?
-   class SortedSet~E extends Comparable~ {
-    <<interface>>
-    +first() : E
-    +last() : E
-   }
+ %% SortedSets only make sense when you can ask "e1 < e2"?
+ class SortedSet~E extends Comparable~ {
+  <<interface>>
+  +first() : E
+  +last() : E
+ }
 
-   %% HashSet is basically a HashMap without a value
-   class HashSet~E~ {
-    <<class>>
-   }
+ %% HashSet is basically a HashMap without a value
+ class HashSet~E~ {
+  <<class>>
+ }
  
-   class TreeSet~E~ {
-    <<class>>
-   }
+ class TreeSet~E~ {
+  <<class>>
+ }
 
-   %% Lists know about indexes
-   class List~E~ {
-    <<interface>>
-    get(int index) : E
-   }
+ %% Lists know about indexes
+ class List~E~ {
+  <<interface>>
+  get(int index) : E
+ }
  
-   %% ArrayLists are backed by arrays and are the standard list
-   class ArrayList~E~ {
-    <<interface>>
-   }
+ %% ArrayLists are backed by arrays and are the standard list
+ class ArrayList~E~ {
+  <<interface>>
+ }
 
-   %% LinkedLists are implemented with linked lists and work very well in specific cases
-   class LinkedList~E~ {
-    <<interface>>
-   }
+ %% LinkedLists are implemented with linked lists and work very well in specific cases
+ class LinkedList~E~ {
+  <<interface>>
+ }
   
-   Iterable <|-- Collection
-   Collection <|-- Set
-   Collection <|-- List
-   Set <|-- HashSet
-   Set <|-- SortedSet
-   SortedSet <|-- TreeSet
-   List <|-- ArrayList
-   List <|-- LinkedList
-  ```
+ Iterable <|-- Collection
+ Collection <|-- Set
+ Collection <|-- List
+ Set <|-- HashSet
+ Set <|-- SortedSet
+ SortedSet <|-- TreeSet
+ List <|-- ArrayList
+ List <|-- LinkedList
+```
 
 - Also Simple: State diagrams (`stateDiagram-v2`)
 
-  ```mermaid
-  stateDiagram-v2
-    Zero : No relevant 7's
-    One : Just past the 7
-    Two : Two past the 7
-    [*] -->Zero
-    Zero-->One : '7'
-    One-->TRUE : '7'
-    One-->Two : 'Not 7'
-    Two-->TRUE : '7'
-    Zero-->Zero : 'Not 7'
-    Two-->Zero : 'Not 7'
-    Two-->FALSE : No more data
-    One-->FALSE : No more data
-    Zero-->FALSE : No more data
-    TRUE-->[*]
-    FALSE-->[*]
+```mermaid
+stateDiagram-v2
+  Zero : No relevant 7's
+  One : Just past the 7
+  Two : Two past the 7
+  [*] -->Zero
+  Zero-->One : '7'
+  One-->TRUE : '7'
+  One-->Two : 'Not 7'
+  Two-->TRUE : '7'
+  Zero-->Zero : 'Not 7'
+  Two-->Zero : 'Not 7'
+  Two-->FALSE : No more data
+  One-->FALSE : No more data
+  Zero-->FALSE : No more data
+  TRUE-->[*]
+  FALSE-->[*]
 
-    note right of TRUE: codingbat.com/prob/p168357
-  ```
+  note right of TRUE: codingbat.com/prob/p168357
+```
 
 ---
 
 - Super Flexible: Nodes and Arrows (`graph`)
 
-  ```mermaid
-  %%{init: {"flowchart": {"curve": "catmullRom"}}}%%
-  graph TB;
+```mermaid
+%%{init: {"flowchart": {"curve": "catmullRom"}}}%%
+graph TB;
   Think-->|Code is difficult to read or think about|MakeImprovements["Increase readability or reduce duplication. No tests change."]
   classDef thinkStyle fill:#f77,color:#000
   classDef pullRequestStyle fill:#77F,color:#000
@@ -250,7 +256,7 @@
   ExtractCodeToMethod-->AllTestsPass
   NewTestFails==>WriteCode["Add simplest obvious code"]
   WriteCode==>AllTestsPass
-  ```
+```
 
 ---
 

@@ -53,3 +53,20 @@ footer {
     font-weight:900;
     background-color: #777777;
 }
+
+/* WCCI colors! */
+.ZebraTable > table tr:nth-child(4n+1) td{
+     background:#ee2375;
+}
+
+.ZebraTable > table tr:nth-child(4n+2) td{
+     background:#72c267;
+}
+
+.ZebraTable > table tr:nth-child(4n+3) td{
+     background:#3a97cd;
+}
+
+.ZebraTable > table tr:nth-child(4n+0) td{
+     background:#f68428;
+}
