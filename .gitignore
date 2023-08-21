@@ -1,0 +1,9 @@
+node_modules
+.gradle
+build/
+bin/
+lessons-export/
+lessons-export*
+*.pdf
+*.swp
+mindmaps.md

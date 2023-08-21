@@ -1,0 +1,55 @@
+.slidev-layout li {
+    /* Any smaller, and URL underlines aren't always visible */
+    line-height: 1.35em;
+}
+
+.slidev-layout td, .slidev-layout th {
+    padding: 0.5rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+
+.slidev-layout code {
+    font-family: 'Iosevka Fixed',monospace,"Courier New"; 
+    font-weight: 700;  /* Iosevka looks better with a bolder font */
+    --prism-background: #606060;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+footer {
+    background-image: url("https://wecancodeit.org/wp-content/uploads/2022/07/Transitional-Logo-WCCI-We-Can-Code-IT-vector-e1658264307471.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right top;
+}
+
+/* don't surround code with backquotes in the actual display */
+:not(pre) > code:before, :not(pre) > code:after {
+    content: '';
+    opacity: 0.0;
+}
+
+
+/* Give code some horizontal padding ... important for quoting single characters */
+:not(pre) > code {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+}
+
+.task-list-item-checkbox {
+    margin-right: 10px;
+}
+
+.CompressedToc {
+    font-size: 0.8rem;
+}
+
+.CompressedToc > ol > li > a > div > p {
+    line-height: 1.0rem;
+}
+
+.slidev-layout th {
+    font-weight:900;
+    background-color: #777777;
+}
