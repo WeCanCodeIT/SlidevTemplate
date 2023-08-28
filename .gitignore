@@ -7,3 +7,4 @@ lessons-export*
 *.pdf
 *.swp
 mindmaps.md
+dist/
